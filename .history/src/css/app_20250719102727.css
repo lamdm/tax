@@ -1,0 +1,36 @@
+/* app global css */
+
+/* Responsive utilities */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: block !important;
+  }
+  
+  /* Force bottom navigation to show on mobile */
+  .bottom-nav {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+  
+  /* Hide bottom navigation on desktop */
+  .bottom-nav {
+    display: none !important;
+  }
+}
