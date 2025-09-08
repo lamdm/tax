@@ -1,0 +1,22 @@
+{
+    "sourceFile": "capacitor.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1755880660333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755885420854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { CapacitorConfig } from '@capacitor/cli';\n \n const config: CapacitorConfig = {\n-  appId: 'com.tax.app',\n+  appId: 'com.lamdm.tax',\n   appName: 'Tax App',\n   webDir: 'dist/spa',\n   server: {\n     androidScheme: 'https'\n"
+                }
+            ],
+            "date": 1755880660333,
+            "name": "Commit-0",
+            "content": "import { CapacitorConfig } from '@capacitor/cli';\n\nconst config: CapacitorConfig = {\n  appId: 'com.tax.app',\n  appName: 'Tax App',\n  webDir: 'dist/spa',\n  server: {\n    androidScheme: 'https'\n  }\n};\n\nexport default config;\n"
+        }
+    ]
+}

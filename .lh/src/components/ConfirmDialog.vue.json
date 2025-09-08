@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/ConfirmDialog.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755875523820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755875523820,
+            "name": "Commit-0",
+            "content": "<template>\n  <q-dialog v-model=\"show\" persistent>\n    <q-card class=\"confirm-dialog\">\n      <q-card-section class=\"text-center q-pt-lg\">\n        <div class=\"text-h6 q-mb-md\">{{ title }}</div>\n        <div class=\"text-body1\">{{ message }}</div>\n      </q-card-section>\n      \n      <q-card-actions class=\"q-px-lg q-pb-lg\">\n        <q-btn\n          flat\n          :label=\"cancelLabel\"\n          color=\"grey\"\n          @click=\"handleCancel\"\n          class=\"col\"\n        />\n        <q-btn\n          unelevated\n          :label=\"confirmLabel\"\n          color=\"primary\"\n          @click=\"handleConfirm\"\n          class=\"col q-ml-sm\"\n        />\n      </q-card-actions>\n    </q-card>\n  </q-dialog>\n</template>\n\n<script setup lang=\"ts\">\ninterface Props {\n  modelValue: boolean;\n  title?: string;\n  message: string;\n  confirmLabel?: string;\n  cancelLabel?: string;\n}\n\ninterface Emits {\n  (e: 'update:modelValue', value: boolean): void;\n  (e: 'confirm'): void;\n  (e: 'cancel'): void;\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  title: 'Xác nhận',\n  confirmLabel: 'Xác nhận',\n  cancelLabel: 'Hủy'\n});\n\nconst emit = defineEmits<Emits>();\n\nconst show = computed({\n  get: () => props.modelValue,\n  set: (value) => emit('update:modelValue', value)\n});\n\nconst handleConfirm = () => {\n  emit('confirm');\n  show.value = false;\n};\n\nconst handleCancel = () => {\n  emit('cancel');\n  show.value = false;\n};\n</script>\n\n<style scoped>\n.confirm-dialog {\n  min-width: 280px;\n  border-radius: 16px;\n}\n\n.confirm-dialog .q-card__section {\n  padding: 24px 24px 16px 24px;\n}\n\n.confirm-dialog .q-card__actions {\n  padding: 16px 24px 24px 24px;\n  gap: 12px;\n}\n\n.confirm-dialog .q-btn {\n  border-radius: 12px;\n  font-weight: 600;\n  height: 44px;\n}\n</style>\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/modules/tax.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755688275857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755688275857,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from 'vue-router';\n\nexport const taxRoutes: RouteRecordRaw[] = [\n  // ========== BÁO CÁO THUẾ ==========\n  {\n    path: 'tax/overview',\n    name: 'tax.overview',\n    component: () => import('pages/tax/OverviewPage.vue'),\n  },\n  {\n    path: 'tax/output',\n    name: 'tax.output',\n    component: () => import('pages/tax/OutputPage.vue'),\n  },\n  {\n    path: 'tax/input',\n    name: 'tax.input',\n    component: () => import('pages/tax/InputPage.vue'),\n  },\n  {\n    path: 'tax/payable',\n    name: 'tax.payable',\n    component: () => import('pages/tax/PayablePage.vue'),\n  },\n  {\n    path: 'tax/report',\n    name: 'tax.report',\n    component: () => import('pages/tax/ReportPage.vue'),\n  },\n];\n"
+        }
+    ]
+}

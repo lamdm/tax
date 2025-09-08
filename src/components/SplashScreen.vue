@@ -1,40 +1,32 @@
 <template>
-  <div class="splash-screen" v-if="show">
+  <div class="splash-screen">
     <div class="splash-content">
       <div class="logo-container">
-        <q-icon name="account_balance" size="80px" color="primary" class="logo-icon" />
-        <h1 class="app-title">Tax App</h1>
-        <p class="app-subtitle">Ứng dụng quản lý thuế</p>
+        <q-icon name="account_balance" size="80px" color="white" class="logo-icon" />
+        <h1 class="app-title">Tax Management</h1>
+        <p class="app-subtitle">Quản lý thuế thông minh</p>
       </div>
       
       <div class="loading-container">
-        <q-spinner-dots size="40px" color="primary" />
-        <p class="loading-text">Đang tải...</p>
+        <q-spinner-dots size="40px" color="white" />
+        <p class="loading-text">Đang khởi tạo...</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-
-const show = ref(true);
-
-onMounted(() => {
-  // Simulate loading time
-  setTimeout(() => {
-    show.value = false;
-  }, 2000);
-});
 </script>
 
 <style scoped>
 .splash-screen {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  max-width: 900px; /* Giới hạn max-width */
+  height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
@@ -43,9 +35,19 @@ onMounted(() => {
   animation: fadeIn 0.5s ease-in;
 }
 
+/* Khi màn hình lớn hơn 900px */
+@media (min-width: 901px) {
+  .splash-screen {
+    width: 900px;
+    height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .splash-content {
   text-align: center;
   color: white;
+  animation: slideUp 0.8s ease-out;
 }
 
 .logo-container {
@@ -55,6 +57,7 @@ onMounted(() => {
 .logo-icon {
   margin-bottom: 20px;
   animation: pulse 2s infinite;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .app-title {
@@ -62,14 +65,16 @@ onMounted(() => {
   font-weight: 700;
   margin: 0;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .app-subtitle {
   font-size: 1.2rem;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.95);
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .loading-container {
@@ -81,8 +86,10 @@ onMounted(() => {
 
 .loading-text {
   font-size: 1rem;
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fadeIn {
@@ -90,6 +97,17 @@ onMounted(() => {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }

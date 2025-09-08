@@ -2,20 +2,6 @@
 
 Đây là ứng dụng demo được xây dựng bằng Quasar Framework và Vue 3, được thiết kế để test giao diện web.
 
-## Tính năng
-
-- **Trang đăng nhập**: Form đăng nhập với validation
-- **Trang đăng ký**: Dialog đăng ký tài khoản mới
-- **Dashboard**: Trang tổng quan với thống kê và hoạt động
-- **Responsive**: Tương thích với mobile và desktop
-- **Modern UI**: Giao diện đẹp với Quasar components
-
-## Cách sử dụng
-
-### Đăng nhập demo
-- **CCCD**: `123456789`
-- **Mật khẩu**: `123456`
-
 ### Chạy ứng dụng
 
 ```bash
@@ -30,20 +16,6 @@ npm run build
 
 # Serve build files
 npm run start
-```
-
-### Cấu trúc project
-
-```
-src/
-├── pages/
-│   ├── LoginPage.vue      # Trang đăng nhập
-│   ├── DashboardPage.vue  # Trang dashboard
-│   └── IndexPage.vue      # Trang chủ
-├── layouts/
-│   └── MainLayout.vue     # Layout chính
-└── router/
-    └── routes.ts          # Cấu hình routing
 ```
 
 ## Công nghệ sử dụng
@@ -88,9 +60,11 @@ npm run build --mode pwa
 npm run build --mode capacitor
 ```
 
-## Demo Credentials
 
-- **CCCD**: 123456789
-- **Password**: 123456
-
-Sau khi đăng nhập thành công, bạn sẽ được chuyển đến trang Dashboard.
+```
+npx cap add ios
+npm run build
+//npx cap copy ios
+npx cap sync ios
+npx cap open ios
+```

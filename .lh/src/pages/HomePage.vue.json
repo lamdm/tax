@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/HomePage.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755872045252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755872045252,
+            "name": "Commit-0",
+            "content": "<template>\n  <q-page class=\"row items-center justify-evenly\">\n    <div class=\"text-center\">\n      <h2 class=\"text-h2 q-mb-md\">{{ t('welcomeToApp') }}</h2>\n      <p class=\"text-body1 q-mb-lg\">{{ t('demoHome') }}</p>\n      \n      <div class=\"row justify-center q-gutter-md\">\n        <q-btn\n          color=\"primary\"\n          size=\"lg\"\n          :label=\"t('login')\"\n          icon=\"login\"\n          @click=\"goToLogin\"\n        />\n        <q-btn\n          outline\n          color=\"primary\"\n          size=\"lg\"\n          :label=\"t('viewDemo')\"\n          icon=\"play_arrow\"\n        />\n      </div>\n    </div>\n  </q-page>\n</template>\n\n<script setup lang=\"ts\">\nimport { useRouter } from 'vue-router';\n\nconst router = useRouter();\nconst { t } = useI18n();\n\nconst goToLogin = () => {\n  void router.push({ name: 'auth.login' });\n};\n</script>\n"
+        }
+    ]
+}

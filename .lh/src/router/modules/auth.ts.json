@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/modules/auth.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755688275856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755688275856,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from 'vue-router';\n\nexport const authRoutes: RouteRecordRaw[] = [\n  {\n    path: '/auth',\n    children: [\n      {\n        path: 'login',\n        name: 'auth.login',\n        component: () => import('pages/auth/LoginPage.vue'),\n      },\n      {\n        path: 'logout',\n        name: 'auth.logout',\n        component: () => import('pages/auth/LogoutPage.vue'),\n      },\n    ],\n  },\n  // Legacy login route (redirect to new structure)\n  {\n    path: '/login',\n    redirect: '/auth/login',\n  },\n];\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/modules/sale.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755688275856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755688275856,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from 'vue-router';\n\nexport const saleRoutes: RouteRecordRaw[] = [\n  // ========== CHỨNG TỪ BÁN HÀNG ==========\n  {\n    path: 'sale/create',\n    name: 'sale.create',\n    component: () => import('pages/sale/CreatePage.vue'),\n  },\n  {\n    path: 'sale/customer',\n    name: 'sale.customer',\n    component: () => import('pages/sale/CustomerPage.vue'),\n  },\n  {\n    path: 'sale/items',\n    name: 'sale.items',\n    component: () => import('pages/sale/ItemsPage.vue'),\n  },\n  {\n    path: 'sale/amount',\n    name: 'sale.amount',\n    component: () => import('pages/sale/AmountPage.vue'),\n  },\n  {\n    path: 'sale/vat',\n    name: 'sale.vat',\n    component: () => import('pages/sale/VatPage.vue'),\n  },\n  {\n    path: 'sale/total',\n    name: 'sale.total',\n    component: () => import('pages/sale/TotalPage.vue'),\n  },\n  {\n    path: 'sale/payment',\n    name: 'sale.payment',\n    component: () => import('pages/sale/PaymentPage.vue'),\n  },\n];\n\nexport const invoiceRoutes: RouteRecordRaw[] = [\n  // ========== HÓA ĐƠN ==========\n  {\n    path: 'invoice/issue',\n    name: 'invoice.issue',\n    component: () => import('pages/invoice/IssuePage.vue'),\n  },\n  {\n    path: 'invoice/from-sale',\n    name: 'invoice.from-sale',\n    component: () => import('pages/invoice/FromSalePage.vue'),\n  },\n  {\n    path: 'invoice/auto-number',\n    name: 'invoice.auto-number',\n    component: () => import('pages/invoice/AutoNumberPage.vue'),\n  },\n  {\n    path: 'invoice/print',\n    name: 'invoice.print',\n    component: () => import('pages/invoice/PrintPage.vue'),\n  },\n  {\n    path: 'invoice/send',\n    name: 'invoice.send',\n    component: () => import('pages/invoice/SendPage.vue'),\n  },\n];\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/modules/payment.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755688275856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755688275856,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from 'vue-router';\n\nexport const paymentRoutes: RouteRecordRaw[] = [\n  // ========== CHỨNG TỪ CHI TIỀN ==========\n  \n  // Chi tiền mặt\n  {\n    path: 'payment/cash/create',\n    name: 'payment.cash.create',\n    component: () => import('pages/payment/cash/CreatePage.vue'),\n  },\n  {\n    path: 'payment/cash/receiver',\n    name: 'payment.cash.receiver',\n    component: () => import('pages/payment/cash/ReceiverPage.vue'),\n  },\n  {\n    path: 'payment/cash/amount',\n    name: 'payment.cash.amount',\n    component: () => import('pages/payment/cash/AmountPage.vue'),\n  },\n  {\n    path: 'payment/cash/reason',\n    name: 'payment.cash.reason',\n    component: () => import('pages/payment/cash/ReasonPage.vue'),\n  },\n  {\n    path: 'payment/cash/account',\n    name: 'payment.cash.account',\n    component: () => import('pages/payment/cash/AccountPage.vue'),\n  },\n  {\n    path: 'payment/cash/store',\n    name: 'payment.cash.store',\n    component: () => import('pages/payment/cash/StorePage.vue'),\n  },\n\n  // Chi tiền gửi\n  {\n    path: 'payment/bank/create',\n    name: 'payment.bank.create',\n    component: () => import('pages/payment/bank/CreatePage.vue'),\n  },\n  {\n    path: 'payment/bank/transfer',\n    name: 'payment.bank.transfer',\n    component: () => import('pages/payment/bank/TransferPage.vue'),\n  },\n  {\n    path: 'payment/bank/account',\n    name: 'payment.bank.account',\n    component: () => import('pages/payment/bank/AccountPage.vue'),\n  },\n  {\n    path: 'payment/bank/amount',\n    name: 'payment.bank.amount',\n    component: () => import('pages/payment/bank/AmountPage.vue'),\n  },\n  {\n    path: 'payment/bank/note',\n    name: 'payment.bank.note',\n    component: () => import('pages/payment/bank/NotePage.vue'),\n  },\n];\n"
+        }
+    ]
+}

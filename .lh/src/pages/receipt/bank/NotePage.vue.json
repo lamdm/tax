@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/receipt/bank/NotePage.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755689042574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755689042574,
+            "name": "Commit-0",
+            "content": "<template>\n  <q-page class=\"q-pa-md\">\n    <div class=\"text-h4 q-mb-md\">Ghi chú</div>\n    <div class=\"text-body1\">Trang nhập ghi chú cho phiếu thu</div>\n  </q-page>\n</template>\n\n<script setup lang=\"ts\">\n// Thu tiền gửi - Ghi chú\n</script>\n"
+        }
+    ]
+}

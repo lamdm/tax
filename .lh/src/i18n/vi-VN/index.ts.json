@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/i18n/vi-VN/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1755698921641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755698953816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n   registerError: 'Có lỗi xảy ra, vui lòng thử lại!',\n \n   // Navigation\n   home: 'Home',\n+  sell: 'Bán Hàng'\n   dashboard: 'Dashboard',\n   reports: 'Báo cáo',\n   profile: 'Cá nhân',\n   help: 'Trợ giúp',\n"
+                },
+                {
+                    "date": 1755698976409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   registerError: 'Có lỗi xảy ra, vui lòng thử lại!',\n \n   // Navigation\n   home: 'Home',\n-  sell: 'Bán Hàng'\n+  sell: 'Bán hàng',\n   dashboard: 'Dashboard',\n   reports: 'Báo cáo',\n   profile: 'Cá nhân',\n   help: 'Trợ giúp',\n"
+                },
+                {
+                    "date": 1755699071488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n \n   // Navigation\n   home: 'Home',\n   sell: 'Bán hàng',\n+  purchase: 'Mua hàng',\n   dashboard: 'Dashboard',\n   reports: 'Báo cáo',\n   profile: 'Cá nhân',\n   help: 'Trợ giúp',\n"
+                },
+                {
+                    "date": 1755699088954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n   // Navigation\n   home: 'Home',\n   sell: 'Bán hàng',\n   purchase: 'Mua hàng',\n+  more: 'Thêm'\n   dashboard: 'Dashboard',\n   reports: 'Báo cáo',\n   profile: 'Cá nhân',\n   help: 'Trợ giúp',\n"
+                },
+                {
+                    "date": 1755699151166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n   // Navigation\n   home: 'Home',\n   sell: 'Bán hàng',\n   purchase: 'Mua hàng',\n+  I\n   more: 'Thêm',\n   dashboard: 'Dashboard',\n   reports: 'Báo cáo',\n   profile: 'Cá nhân',\n"
+                }
+            ],
+            "date": 1755698921641,
+            "name": "Commit-0",
+            "content": "export default {\n  // Common\n  appName: 'Tax App',\n  login: 'Đăng nhập',\n  register: 'Đăng ký',\n  logout: 'Đăng xuất',\n  cancel: 'Hủy',\n  save: 'Lưu',\n  edit: 'Sửa',\n  delete: 'Xóa',\n  back: 'Quay lại',\n  next: 'Tiếp theo',\n  submit: 'Gửi',\n  loading: 'Đang tải...',\n  error: 'Lỗi',\n  success: 'Thành công',\n  warning: 'Cảnh báo',\n  info: 'Thông tin',\n\n  // Login\n  welcomeBack: 'Chào mừng bạn trở lại!',\n  cccd: 'CCCD',\n  password: 'Mật khẩu',\n  rememberMe: 'Ghi nhớ đăng nhập',\n  forgotPassword: 'Quên mật khẩu?',\n  noAccount: 'Chưa có tài khoản?',\n  registerNow: 'Đăng ký ngay',\n  loginError: 'CCCD hoặc mật khẩu không đúng!',\n  loginFailed: 'Có lỗi xảy ra, vui lòng thử lại!',\n\n  // Register\n  createAccount: 'Tạo tài khoản mới',\n  fullName: 'Họ và tên',\n  confirmPassword: 'Xác nhận mật khẩu',\n  agreeTerms: 'Tôi đồng ý với điều khoản sử dụng',\n  registerSuccess: 'Đăng ký thành công! Vui lòng kiểm tra email để xác thực.',\n  registerError: 'Có lỗi xảy ra, vui lòng thử lại!',\n\n  // Navigation\n  home: 'Home',\n  dashboard: 'Dashboard',\n  reports: 'Báo cáo',\n  profile: 'Cá nhân',\n  help: 'Trợ giúp',\n\n  // Dashboard\n  welcomeMessage: 'Chào mừng bạn đến với ứng dụng demo!',\n  users: 'Người dùng',\n  growth: 'Tăng trưởng',\n  revenue: 'Doanh thu',\n  notifications: 'Thông báo',\n  recentActivity: 'Hoạt động gần đây',\n  createNew: 'Tạo mới',\n  logoutSuccess: 'Đăng xuất thành công!',\n  backToHome: 'Về trang chủ',\n  settings: 'Cài đặt',\n  loginSuccess: 'Đăng nhập thành công',\n  loginSuccessDesc: 'Bạn đã đăng nhập vào hệ thống',\n  updateInfo: 'Cập nhật thông tin',\n  updateInfoDesc: 'Thông tin cá nhân đã được cập nhật',\n  createReport: 'Tạo báo cáo mới',\n  createReportDesc: 'Báo cáo tháng 12 đã được tạo',\n  sendNotification: 'Gửi thông báo',\n  sendNotificationDesc: 'Thông báo đã được gửi đến 150 người dùng',\n  timeAgo2min: '2 phút trước',\n  timeAgo1hour: '1 giờ trước',\n  timeAgo3hours: '3 giờ trước',\n  timeAgo5hours: '5 giờ trước',\n  timeAgo2hours: '2 giờ trước',\n  timeAgo1day: '1 ngày trước',\n  timeAgo3days: '3 ngày trước',\n\n  // Reports\n  reportsDesc: 'Quản lý và xem báo cáo hệ thống',\n  monthlyReport: 'Báo cáo tháng',\n  monthlyReportDesc: 'Thống kê tháng 12/2024',\n  quarterlyReport: 'Báo cáo quý',\n  quarterlyReportDesc: 'Thống kê quý 4/2024',\n  yearlyReport: 'Báo cáo năm',\n  yearlyReportDesc: 'Thống kê năm 2024',\n  recentReports: 'Báo cáo gần đây',\n  createNewReport: 'Tạo báo cáo mới',\n  creatingReport: 'Đang tạo báo cáo mới...',\n  taxReportDec: 'Báo cáo thuế tháng 12',\n  taxReportDesc: 'Tổng hợp thuế thu nhập cá nhân',\n  revenueReportQ4: 'Báo cáo doanh thu Q4',\n  revenueReportDesc: 'Thống kê doanh thu quý 4',\n  costReport: 'Báo cáo chi phí',\n  costReportDesc: 'Phân tích chi phí vận hành',\n\n  // Profile\n  personalInfo: 'Quản lý thông tin cá nhân',\n  personalInfoTitle: 'Thông tin cá nhân',\n  personalInfoDesc: 'Cập nhật thông tin cá nhân',\n  changePassword: 'Đổi mật khẩu',\n  changePasswordDesc: 'Thay đổi mật khẩu đăng nhập',\n  notificationsTitle: 'Thông báo',\n  notificationsDesc: 'Cài đặt thông báo',\n  helpTitle: 'Trợ giúp',\n  helpDesc: 'Hướng dẫn sử dụng',\n\n  // Validation\n  required: 'Trường này là bắt buộc',\n  invalidCCCD: 'CCCD không hợp lệ',\n  invalidPassword: 'Mật khẩu phải có ít nhất 6 ký tự',\n  passwordMismatch: 'Mật khẩu không khớp',\n  agreeTermsRequired: 'Bạn phải đồng ý với điều khoản',\n\n  // Demo\n  welcomeToApp: 'Chào mừng đến với ứng dụng!',\n  demoHome: 'Đây là trang chủ của ứng dụng demo',\n  viewDemo: 'Xem Demo',\n  demoCredentials: 'Thông tin đăng nhập demo',\n  demoCCCD: 'CCCD: 123456789',\n  demoPassword: 'Mật khẩu: 123456',\n}; "
+        }
+    ]
+}

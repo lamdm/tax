@@ -37,7 +37,11 @@ export default {
   registerError: 'Có lỗi xảy ra, vui lòng thử lại!',
 
   // Navigation
-  home: 'Trang chủ',
+  home: 'Home',
+  sell: 'Bán hàng',
+  purchase: 'Mua hàng',
+  incomeExpenditure : 'Thu chi',
+  more: 'Thêm',
   dashboard: 'Dashboard',
   reports: 'Báo cáo',
   profile: 'Cá nhân',

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/modules/purchase.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755688275857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755688275857,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from 'vue-router';\n\nexport const purchaseRoutes: RouteRecordRaw[] = [\n  // ========== CHỨNG TỪ MUA HÀNG ==========\n  {\n    path: 'purchase/create',\n    name: 'purchase.create',\n    component: () => import('pages/purchase/CreatePage.vue'),\n  },\n  {\n    path: 'purchase/supplier',\n    name: 'purchase.supplier',\n    component: () => import('pages/purchase/SupplierPage.vue'),\n  },\n  {\n    path: 'purchase/items',\n    name: 'purchase.items',\n    component: () => import('pages/purchase/ItemsPage.vue'),\n  },\n  {\n    path: 'purchase/amount',\n    name: 'purchase.amount',\n    component: () => import('pages/purchase/AmountPage.vue'),\n  },\n  {\n    path: 'purchase/vat',\n    name: 'purchase.vat',\n    component: () => import('pages/purchase/VatPage.vue'),\n  },\n  {\n    path: 'purchase/total',\n    name: 'purchase.total',\n    component: () => import('pages/purchase/TotalPage.vue'),\n  },\n  {\n    path: 'purchase/payment',\n    name: 'purchase.payment',\n    component: () => import('pages/purchase/PaymentPage.vue'),\n  },\n  {\n    path: 'purchase/store',\n    name: 'purchase.store',\n    component: () => import('pages/purchase/StorePage.vue'),\n  },\n];\n"
+        }
+    ]
+}

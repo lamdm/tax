@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/payment/cash/StorePage.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755689042574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755689042574,
+            "name": "Commit-0",
+            "content": "<template>\n  <q-page class=\"q-pa-md\">\n    <div class=\"text-h4 q-mb-md\">Lưu phiếu chi</div>\n    <div class=\"text-body1\">Trang lưu phiếu chi tiền mặt</div>\n  </q-page>\n</template>\n\n<script setup lang=\"ts\">\n// Chi tiền mặt - Lưu phiếu\n</script>\n"
+        }
+    ]
+}

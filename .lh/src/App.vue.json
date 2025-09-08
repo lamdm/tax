@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/App.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1755599219928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755599567628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <div id=\"q-app\" class=\"app-container\">\n+  <div id=\"q-app\">\n     <splash-screen />\n     <router-view />\n   </div>\n </template>\n@@ -9,57 +9,35 @@\n import SplashScreen from 'components/SplashScreen.vue';\n </script>\n \n <style>\n-/* Global app styles */\n+/* Mobile-first design - Giao diện mobile làm chuẩn */\n+html,\n+body {\n+  margin: 0;\n+  padding: 0;\n+  background: white;\n+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;\n+}\n+\n #q-app {\n+  width: 100%;\n   max-width: 900px;\n   margin: 0 auto;\n-  background: #fff;\n+  background: #f8fafc;\n   min-height: 100vh;\n   position: relative;\n }\n \n-.app-container {\n-  width: 100%;\n-  min-height: 100vh;\n-  background: #f8fafc;\n-}\n-\n-/* Ensure body and html respect the max-width */\n-html,\n-body {\n-  margin: 0;\n-  padding: 0;\n-  background: #f0f2f5;\n-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;\n-}\n-\n-/* Center the app on larger screens */\n+/* Khi màn hình lớn hơn 900px - hiển thị như web với 2 bên trắng */\n @media (min-width: 901px) {\n-  #q-app {\n-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);\n-    margin-top: 0;\n-  }\n-  \n   body {\n-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n+    background: white;\n     display: flex;\n     justify-content: center;\n-    align-items: flex-start;\n-    min-height: 100vh;\n   }\n-}\n-\n-/* Mobile specific adjustments */\n-@media (max-width: 480px) {\n+  \n   #q-app {\n-    background: #f8fafc;\n+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);\n   }\n }\n-\n-/* Smooth transitions for responsive changes */\n-#q-app,\n-.app-container {\n-  transition: all 0.3s ease;\n-}\n </style>\n"
+                },
+                {
+                    "date": 1755928962837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\n   <div id=\"q-app\">\n-    <splash-screen />\n-    <router-view />\n+    <splash-screen v-if=\"showSplash\" />\n+    <router-view v-else />\n   </div>\n </template>\n \n <script setup lang=\"ts\">\n"
+                },
+                {
+                    "date": 1755928973393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   </div>\n </template>\n \n <script setup lang=\"ts\">\n+import { ref, onMounted } from 'vue';\n import SplashScreen from 'components/SplashScreen.vue';\n </script>\n \n <style>\n"
+                },
+                {
+                    "date": 1755928985137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,16 @@\n \n <script setup lang=\"ts\">\n import { ref, onMounted } from 'vue';\n import SplashScreen from 'components/SplashScreen.vue';\n+\n+const showSplash = ref(true);\n+\n+onMounted(() => {\n+  setTimeout(() => {\n+    showSplash.value = false;\n+  }, 2000); // Hiển thị splash trong 2 giây, bạn chỉnh lại theo ý muốn\n+});\n </script>\n \n <style>\n /* Mobile-first design - Giao diện mobile làm chuẩn */\n"
+                }
+            ],
+            "date": 1755599219928,
+            "name": "Commit-0",
+            "content": "<template>\n  <div id=\"q-app\" class=\"app-container\">\n    <splash-screen />\n    <router-view />\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nimport SplashScreen from 'components/SplashScreen.vue';\n</script>\n\n<style>\n/* Global app styles */\n#q-app {\n  max-width: 900px;\n  margin: 0 auto;\n  background: #fff;\n  min-height: 100vh;\n  position: relative;\n}\n\n.app-container {\n  width: 100%;\n  min-height: 100vh;\n  background: #f8fafc;\n}\n\n/* Ensure body and html respect the max-width */\nhtml,\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f0f2f5;\n  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;\n}\n\n/* Center the app on larger screens */\n@media (min-width: 901px) {\n  #q-app {\n    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);\n    margin-top: 0;\n  }\n  \n  body {\n    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    min-height: 100vh;\n  }\n}\n\n/* Mobile specific adjustments */\n@media (max-width: 480px) {\n  #q-app {\n    background: #f8fafc;\n  }\n}\n\n/* Smooth transitions for responsive changes */\n#q-app,\n.app-container {\n  transition: all 0.3s ease;\n}\n</style>\n"
+        }
+    ]
+}

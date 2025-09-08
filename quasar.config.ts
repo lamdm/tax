@@ -82,6 +82,21 @@ export default defineConfig((ctx) => {
           // you need to set i18n resource including paths !
           include: [ fileURLToPath(new URL('./src/i18n', import.meta.url)) ]
         }],
+        
+        ['unplugin-auto-import/vite', {
+          imports: [
+            'vue',
+            'vue-router',
+            {
+              'vue-i18n': ['useI18n']
+            }
+          ],
+          dts: true, // generate auto-imports.d.ts
+          eslintrc: {
+            enabled: true,
+            filepath: './.eslintrc-auto-import.json'
+          }
+        }],
 
         ['vite-plugin-checker', {
           vueTsc: true,

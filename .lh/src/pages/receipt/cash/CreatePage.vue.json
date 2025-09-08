@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/receipt/cash/CreatePage.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755689040575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755689040575,
+            "name": "Commit-0",
+            "content": "<template>\n  <q-page class=\"q-pa-md\">\n    <div class=\"text-h4 q-mb-md\">Tạo phiếu thu tiền mặt</div>\n    <div class=\"text-body1\">Trang tạo phiếu thu tiền mặt</div>\n  </q-page>\n</template>\n\n<script setup lang=\"ts\">\n// Thu tiền mặt - Tạo mới\n</script>\n"
+        }
+    ]
+}

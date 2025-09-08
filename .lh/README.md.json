@@ -1,0 +1,38 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1755688057468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755880598374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,5 +57,8 @@\n npm run build --mode pwa\n \n # Build cho mobile app\n npm run build --mode capacitor\n-```\n\\ No newline at end of file\n+```\n+\n+\n+npx cap add ios\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755880617184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,5 +60,9 @@\n npm run build --mode capacitor\n ```\n \n \n-npx cap add ios\n\\ No newline at end of file\n+```\n+npx cap add ios\n+npm run build\n+\n+```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755880627586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,6 +63,7 @@\n \n ```\n npx cap add ios\n npm run build\n+npx cap copy ios\n \n ```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755880744522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,7 +63,8 @@\n \n ```\n npx cap add ios\n npm run build\n-npx cap copy ios\n+//npx cap copy ios\n+npx cap sync ios\n \n ```\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755881043615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,6 +65,6 @@\n npx cap add ios\n npm run build\n //npx cap copy ios\n npx cap sync ios\n-\n+npx cap open ios\n ```\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1755688057468,
+            "name": "Commit-0",
+            "content": "# Tax App - Ứng dụng Demo\n\nĐây là ứng dụng demo được xây dựng bằng Quasar Framework và Vue 3, được thiết kế để test giao diện web.\n\n### Chạy ứng dụng\n\n```bash\n# Cài đặt dependencies\nnpm install\n\n# Chạy development server\nnpm run dev\n\n# Build cho production\nnpm run build\n\n# Serve build files\nnpm run start\n```\n\n## Công nghệ sử dụng\n\n- **Quasar Framework v2**: UI framework\n- **Vue 3**: Frontend framework\n- **TypeScript**: Type safety\n- **Vite**: Build tool\n- **Vue Router**: Client-side routing\n\n## API Integration\n\nHiện tại ứng dụng sử dụng mock data. Để tích hợp với API thực tế:\n\n1. Cập nhật `src/boot/axios.ts` để cấu hình API base URL\n2. Thay thế mock calls trong `LoginPage.vue` và `DashboardPage.vue`\n3. Thêm authentication store để quản lý session\n\n## Development\n\n```bash\n# Lint code\nnpm run lint\n\n# Format code\nnpm run format\n\n# Type check\nnpm run type-check\n```\n\n## Build và Deploy\n\n```bash\n# Build cho production\nnpm run build\n\n# Build cho PWA\nnpm run build --mode pwa\n\n# Build cho mobile app\nnpm run build --mode capacitor\n```"
+        }
+    ]
+}

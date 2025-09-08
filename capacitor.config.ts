@@ -1,9 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.tax.app',
+  appId: 'com.lamdm.tax',
   appName: 'Tax App',
-  webDir: 'www',
+  webDir: 'dist/spa',
   server: {
     androidScheme: 'https'
   }

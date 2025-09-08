@@ -31,13 +31,21 @@ export default {
   // Register
   createAccount: 'Create new account',
   fullName: 'Full name',
+  email: 'Email',
+  phone: 'Phone number',
   confirmPassword: 'Confirm password',
   agreeTerms: 'I agree to the terms of service',
+  haveAccount: 'Already have an account?',
+  loginNow: 'Login now',
   registerSuccess: 'Registration successful! Please check your email for verification.',
   registerError: 'An error occurred, please try again!',
 
   // Navigation
   home: 'Home',
+  sell: 'Sell',
+  purchase: 'Purchase',
+  incomeExpenditure : 'I&E',
+  more: 'More',
   dashboard: 'Dashboard',
   reports: 'Reports',
   profile: 'Profile',
@@ -102,6 +110,8 @@ export default {
   // Validation
   required: 'This field is required',
   invalidCCCD: 'Invalid CCCD',
+  invalidEmail: 'Invalid email format',
+  invalidPhone: 'Invalid phone number',
   invalidPassword: 'Password must be at least 6 characters',
   passwordMismatch: 'Passwords do not match',
   agreeTermsRequired: 'You must agree to the terms',

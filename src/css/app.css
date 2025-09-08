@@ -1,37 +1,127 @@
-/* app global css */
+/* app global css - Mobile-first design */
+@import './responsive.css';
 
-/* Responsive utilities */
-.desktop-only {
+/* Override Quasar toolbar title để không full width */
+.q-toolbar__title.app-title {
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+
+/* Mobile-first approach - Giao diện mobile làm chuẩn */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background: white;
+}
+
+/* Container chính - Max width 900px */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+/* Mobile-first utilities */
+.mobile-only {
   display: block;
 }
 
-.mobile-only {
-  display: none;
+.desktop-only {
+  display: none; /* Bỏ hoàn toàn desktop design */
 }
 
-/* Responsive breakpoints */
-@media (max-width: 1024px) {
-  .desktop-only {
-    display: none !important;
-  }
-  
-  .mobile-only {
-    display: block !important;
+/* Responsive breakpoints - Tất cả đều dựa trên mobile */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 8px;
   }
 }
 
-@media (min-width: 1025px) {
-  .desktop-only {
-    display: block !important;
+@media (min-width: 361px) and (max-width: 480px) {
+  .container {
+    padding: 0 12px;
   }
-  
-  .mobile-only {
-    display: none !important;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Khi màn hình lớn hơn 900px - vẫn giữ mobile design */
+@media (min-width: 901px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+.col-12 { width: 100%; }
+
+/* Mobile-first text sizes */
+.text-responsive {
+  font-size: 14px;
+}
+
+@media (min-width: 481px) {
+  .text-responsive {
+    font-size: 16px;
   }
 }
 
 @media (min-width: 769px) {
-  .mobile-only {
-    display: none !important;
+  .text-responsive {
+    font-size: 16px; /* Giữ kích thước mobile */
+  }
+}
+
+/* Mobile-first spacing */
+.p-0 { padding: 0; }
+.p-1 { padding: 8px; }
+.p-2 { padding: 12px; }
+.p-3 { padding: 16px; }
+.p-4 { padding: 20px; }
+
+.m-0 { margin: 0; }
+.m-1 { margin: 8px; }
+.m-2 { margin: 12px; }
+.m-3 { margin: 16px; }
+.m-4 { margin: 20px; }
+
+/* Common utilities */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+/* Mobile-first buttons */
+.btn-mobile {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 481px) {
+  .btn-mobile {
+    width: auto;
+    margin-bottom: 0;
   }
 }

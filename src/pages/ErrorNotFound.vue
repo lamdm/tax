@@ -2,7 +2,7 @@
   <div class="fullscreen error-page">
     <div class="error-container">
       <div class="error-illustration">
-        <q-icon name="search_off" size="120px" color="grey-4" />
+        <q-icon name="error_outline" size="120px" color="primary" />
       </div>
       
       <div class="error-code">
@@ -19,24 +19,13 @@
 
       <div class="error-actions">
         <q-btn
-          color="primary"
           unelevated
-          to="/"
+          :to="{ name: 'dashboard' }"
           label="Về trang chủ"
           no-caps
           size="lg"
-          class="q-mr-md"
           icon="home"
-        />
-        <q-btn
-          outline
-          color="primary"
-          unelevated
-          @click="goBack"
-          label="Quay lại"
-          no-caps
-          size="lg"
-          icon="arrow_back"
+          class="home-btn"
         />
       </div>
     </div>
@@ -44,44 +33,41 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-
-const goBack = () => {
-  router.back();
-};
+// Removed router since we don't need goBack function anymore
 </script>
 
 <style scoped>
 .error-page {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #ffffff;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .error-container {
   max-width: 500px;
   text-align: center;
-  background: white;
-  border-radius: 20px;
   padding: 60px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .error-illustration {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  animation: bounce 2s infinite;
 }
 
 .error-code {
   font-size: 8rem;
   font-weight: 900;
-  color: #e0e0e0;
+  color: #667eea;
   line-height: 1;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
+  text-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
 }
 
 .error-title {
@@ -101,16 +87,38 @@ const goBack = () => {
 .error-actions {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 
-.error-actions .q-btn {
-  border-radius: 12px;
+.home-btn {
+  border-radius: 16px;
   font-weight: 600;
-  min-width: 160px;
+  min-width: 200px;
+  height: 52px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  color: white;
 }
 
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .error-page {
     padding: 16px;
@@ -118,11 +126,10 @@ const goBack = () => {
   
   .error-container {
     padding: 40px 24px;
-    margin: 20px;
   }
   
   .error-illustration {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .error-illustration .q-icon {
@@ -142,13 +149,7 @@ const goBack = () => {
     margin-bottom: 30px;
   }
   
-  .error-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .error-actions .q-btn {
+  .home-btn {
     width: 100%;
     max-width: 250px;
   }

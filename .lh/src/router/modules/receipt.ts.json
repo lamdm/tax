@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/modules/receipt.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755688275857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755688275857,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from 'vue-router';\n\nexport const receiptRoutes: RouteRecordRaw[] = [\n  // ========== CHỨNG TỪ THU TIỀN ==========\n  \n  // Thu tiền mặt\n  {\n    path: 'receipt/cash/create',\n    name: 'receipt.cash.create',\n    component: () => import('pages/receipt/cash/CreatePage.vue'),\n  },\n  {\n    path: 'receipt/cash/customer',\n    name: 'receipt.cash.customer',\n    component: () => import('pages/receipt/cash/CustomerPage.vue'),\n  },\n  {\n    path: 'receipt/cash/amount',\n    name: 'receipt.cash.amount',\n    component: () => import('pages/receipt/cash/AmountPage.vue'),\n  },\n  {\n    path: 'receipt/cash/reason',\n    name: 'receipt.cash.reason',\n    component: () => import('pages/receipt/cash/ReasonPage.vue'),\n  },\n  {\n    path: 'receipt/cash/account',\n    name: 'receipt.cash.account',\n    component: () => import('pages/receipt/cash/AccountPage.vue'),\n  },\n  {\n    path: 'receipt/cash/store',\n    name: 'receipt.cash.store',\n    component: () => import('pages/receipt/cash/StorePage.vue'),\n  },\n\n  // Thu tiền gửi\n  {\n    path: 'receipt/bank/create',\n    name: 'receipt.bank.create',\n    component: () => import('pages/receipt/bank/CreatePage.vue'),\n  },\n  {\n    path: 'receipt/bank/transfer',\n    name: 'receipt.bank.transfer',\n    component: () => import('pages/receipt/bank/TransferPage.vue'),\n  },\n  {\n    path: 'receipt/bank/account',\n    name: 'receipt.bank.account',\n    component: () => import('pages/receipt/bank/AccountPage.vue'),\n  },\n  {\n    path: 'receipt/bank/amount',\n    name: 'receipt.bank.amount',\n    component: () => import('pages/receipt/bank/AmountPage.vue'),\n  },\n  {\n    path: 'receipt/bank/note',\n    name: 'receipt.bank.note',\n    component: () => import('pages/receipt/bank/NotePage.vue'),\n  },\n];\n"
+        }
+    ]
+}
