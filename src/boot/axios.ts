@@ -9,8 +9,8 @@ declare module 'vue' {
   }
 }
 
-// Get API base URL from environment variable or use default
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.example.com';
+// Get API base URL from environment variable or use local development default
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
 
 // Be careful when using SSR for cross-request state pollution
 // due to creating a Singleton instance here;
@@ -38,6 +38,16 @@ api.interceptors.request.use(
   }
 );
 
+// Helper function to show error notifications
+function showErrorNotification(message: string, timeout = 3000) {
+  Notify.create({
+    type: 'negative',
+    message,
+    position: 'top',
+    timeout
+  });
+}
+
 // Response interceptor for API calls
 api.interceptors.response.use(
   (response) => {
@@ -48,61 +58,40 @@ api.interceptors.response.use(
     if (error.response) {
       // Server responded with error status
       const status = error.response.status;
-      const data = error.response.data as { message?: string };
+      const data = error.response.data;
+      const errorMessage = typeof data === 'object' && data && 'message' in data 
+        ? String(data.message) 
+        : undefined;
       
       switch (status) {
         case 401:
-          Notify.create({
-            type: 'negative',
-            message: 'Authentication failed. Please log in again.',
-            position: 'top'
-          });
+          showErrorNotification('Authentication failed. Please log in again.');
           break;
         case 403:
-          Notify.create({
-            type: 'negative',
-            message: 'Access denied.',
-            position: 'top'
-          });
+          showErrorNotification('Access denied.');
           break;
         case 404:
-          Notify.create({
-            type: 'negative',
-            message: 'Resource not found.',
-            position: 'top'
-          });
+          showErrorNotification('Resource not found.');
           break;
         case 500:
           // Handle Laravel backend errors including log file permission issues
-          Notify.create({
-            type: 'negative',
-            message: data.message || 'Server error. Please contact support if the issue persists.',
-            position: 'top',
-            timeout: 5000
-          });
+          showErrorNotification(
+            errorMessage || 'Server error. Please contact support if the issue persists.',
+            5000
+          );
           break;
         default:
-          Notify.create({
-            type: 'negative',
-            message: data.message || 'An error occurred. Please try again.',
-            position: 'top'
-          });
+          showErrorNotification(errorMessage || 'An error occurred. Please try again.');
       }
     } else if (error.request) {
       // Request was made but no response received
-      Notify.create({
-        type: 'negative',
-        message: 'Unable to connect to the server. Please check your connection.',
-        position: 'top',
-        timeout: 5000
-      });
+      showErrorNotification(
+        'Unable to connect to the server. Please check your connection.',
+        5000
+      );
     } else {
       // Something else happened
-      Notify.create({
-        type: 'negative',
-        message: 'An unexpected error occurred.',
-        position: 'top'
-      });
+      showErrorNotification('An unexpected error occurred.');
     }
     
     return Promise.reject(error);
